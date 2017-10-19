@@ -235,3 +235,9 @@ th {
 .titulo span{
   text-decoration: underline;
 }
+
+
+/*media query*/
+@media screen and (max-width: 800px) {
+
+}
