@@ -95,7 +95,7 @@ font-size: 30px;
 }
 
 .contenedor {
-  width: 800px;
+  max-width: 800px;
   margin: auto;
   position: relative;
 }
@@ -239,5 +239,60 @@ th {
 
 /*media query*/
 @media screen and (max-width: 800px) {
+  
+  /*portada*/
+  .portada {
+    height: auto;
+  }
+  .titulo {
+    font-size: 45px;
+    margin-top: 30px;
+  }
+
+  .contenedor .title-a {
+    font-size: 18px;
+  }
+
+  .portada .boton {
+    /*para poder agregar margenes, convertimos el display a inline-block porque inline no toma margenes*/
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+/*portada*/
+
+/*guitarras*/
+.guitarras .title-a {
+margin-top: 18px;
+  font-size:30px;
+}
+  .guitarras {
+    text-align: center;
+  }
+
+.right, .left {
+  float: none;
+  position: static;
+}
+
+.contenedor-guitarra-a {
+  margin:0;
+  padding: 0;
+}
+.title-b {
+  margin: 0;
+}
+
+.guitarra li {
+  list-style: none;
+}
+
+.guitarra.b {
+  height: auto;
+}
+.contenedor-guitarra-b {
+  position: static;
+  margin: 0;
+}
+/*guitarras*/
 
 }
