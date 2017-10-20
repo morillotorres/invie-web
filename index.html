@@ -5,6 +5,7 @@
     <title>invie - tus mejores guitarras!</title>
     <link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="estilo/invie.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
     <!-- <link rel="stylesheet"  media="(max-width: 800px)" href="estilo/media-query.css"> -->
   </head>
 
@@ -16,7 +17,9 @@
         <figure class="logotipo">
           <img src="images/invie.png" width="186" height="60" alt="Invie logotipo">
         </figure>
-        <nav class="menu">
+        <!-- icono de menu -->
+        <span class=" burger-button icon-menu" id="burger"></span>
+        <nav class="menu" id="menu">
           <ul>  <!-- unordered list -->
             <li> <!-- elemento de la lista -->
               <a href="index.html">home</a>
@@ -122,5 +125,20 @@
         </form>
       </div>
     </footer>
+    <script type="text/javascript">
+      var $burger = document.getElementById('burger')
+      var $menu = document.getElementById('menu')
+      $burger.addEventListener('touchstart', function () {
+        menu.classList.toggle('active')
+        if ($menu.classList.contains("active")) {
+          $burger.classList.remove('icon-menu')
+          $burger.classList.add('icon-close')
+        }
+        if (!$menu.classList.contains("active")) {
+            $burger.classList.remove('icon-close')
+          $burger.classList.add('icon-menu')
+        }
+      })
+    </script>
   </body>
 </html>
